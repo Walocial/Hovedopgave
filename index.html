@@ -19,11 +19,17 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="images/innosLogo.webp" type="image/webp">
     <script src="scripts/slider.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav id="pcMenu">
+
+        <a href="#">
+            <img src="images/innosFullLogo.png" alt="Innos Tools Logo - Hjem Knap" height="45" width="128">
+        </a>
+        <i class="fa-solid fa-bars" id="mobilOpen" onclick="showMenu()"></i>
+        <nav id="pcNav">
             <ul>
                 <li></li>
                 <li></li>
@@ -32,29 +38,50 @@
                 <li></li>
             </ul>
         </nav>
-        <nav>
+        <nav id="mobilMenu">
+            <i class="fa-solid fa-x" id="mobilClose" onclick="hideMenu()"></i>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Produkter</li>
+                <li>Kneel-it</li>
+                <li>Service og Support</li>
+                <li>Kontakt os</li>
+                <li>Om Innos</li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="innosForside">
-            <img src="images/innosLogo.webp" alt="Innos Tools logo" height="130" width="130">
-            <h1>Innovative kvalitetsløsninger til professionelle</h1>
-            <a href="#" class="ctaBtn">
-                <h2>FÅ BESØG AF OS</h2>
-            </a>
-            <i class="fa-solid fa-angle-down"></i>
-            <div id="bckSlider"></div>
+            <div id="forsideContentWrap">
+
+                <img id="spinningLogo" src="images/innosLogo.webp" alt="Innos Tools logo" height="130" width="130">
+                <h1>INNOS TOOLS</h1>
+                <h2>Innovative kvalitetsløsninger til professionelle</h2>
+                <a href="#" class="ctaBtn">
+                    <h3>FÅ BESØG AF OS</h3>
+                </a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div id="bckSlider"></div> <!-- Div element med skiftende baggrund. Billeder styret af script -->
         </section>
         <section id="forsideOmos">
             <ul>
+                <li>t</li>
+                <li>e</li>
+                <li>s</li>
+                <li>t</li>
+                <li>t</li>
+                <li>e</li>
+                <li>s</li>
+                <li>t</li>
+                <li>t</li>
+                <li>e</li>
+                <li>s</li>
+                <li>t</li>
+                <li>t</li>
+                <li>e</li>
+                <li>s</li>
+                <li>t</li>
                 <li>t</li>
                 <li>e</li>
                 <li>s</li>

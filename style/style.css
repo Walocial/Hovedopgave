@@ -6,18 +6,69 @@
     list-style-type: none;
 }
 
-/* --------------------- Phone Version -----------------------*/ 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(0.5);
+    }
+    50% {
+        transform: rotate(360deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1) translateY(-120px);
+    }
+}
 
-header {
-    position: fixed;
+/* --------------------- Phone Version -----------------------*/ 
+body {
+    position: relative;
+}
+
+header nav {
     z-index: 10;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 80px;
-    width: 90%;
-    max-width: 1920px;
+}
+#pcNav {
+    display: none;
+}
+header {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 16px;
+    height: 60px;
+    width: 100%;
     background-color: white;
+}
+header i {
+    font-size: 40px;
+}
+#mobilMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 8px 16px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    background-color: lightskyblue;
+    z-index: 20;
+    transition: 500ms;
+}
+#mobilMenu ul {
+    /* border: 4px solid magenta; */
+    width: 100%;
+    margin: 10vh 0 0 0;
+}
+#mobilMenu li {
+    border: 2px solid black;
+    width: 80%;
+    margin: 30px auto;
+    padding: 4px 8px;
+    text-align: left;
+    font-size: 30px;
 }
 
 #innosForside {
@@ -43,20 +94,62 @@ header {
     background-position: center;
     background-size: cover;
 }
+#bckSlider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #0274be, #205e87);
+    opacity: .3;
+}
+
+#forsideContentWrap {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+#spinningLogo {
+    position: absolute;
+    transform: translateY(-120px);
+    animation-name: spin;
+    animation-duration: 4s;
+}
+
+#innosForside h1 {
+    font-size: 50px;
+    font-family:sans-serif;
+}
 
 /* --------------------- Desktop Version -----------------------*/ 
 @media screen and (min-width: 1200px) {
 
-
     header {
-        position: fixed;
+        height: 80px;
+        width: 98%;
+        max-width: 1920px;
+        justify-content: space-around;
         left: 0;
         right: 0;
         margin: 0 auto;
-        height: 80px;
-        width: 90%;
-        max-width: 1920px;
-        background-color: white;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    #mobilMenu, #mobilOpen {
+        display: none;
+    }
+
+    #pcMenu {
+        display: block;
+
     }
 
 }
