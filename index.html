@@ -28,7 +28,7 @@
         <a href="#">
             <img src="images/innosFullLogo.png" alt="Innos Tools Logo - Hjem Knap" height="45" width="128">
         </a>
-        <i class="fa-solid fa-bars" id="mobilOpen" onclick="showMenu()"></i>
+        <i class="fa-solid fa-bars" id="mobilMenuOpen" onclick="showMenu()"></i>
         <nav id="pcNav">
             <ul>
                 <li></li>
@@ -39,7 +39,7 @@
             </ul>
         </nav>
         <nav id="mobilMenu">
-            <i class="fa-solid fa-x" id="mobilClose" onclick="hideMenu()"></i>
+            <i class="fa-solid fa-x" onclick="hideMenu()"></i>
             <ul>
                 <li>Produkter</li>
                 <li>Kneel-it</li>
@@ -60,7 +60,9 @@
                 <a href="#" id="mainCTABtn">
                     <h3>FÅ BESØG AF OS</h3>
                 </a>
-                <i id="dropBtn" class="fa-solid fa-angle-down"></i>
+                <a href="#content">
+                    <i id="dropBtn" class="fa-solid fa-angle-down"></i>
+                </a>
             </div>
             <div id="bckSlider"></div> <!-- Div element med skiftende baggrund. Billeder styret af script -->
         </section>
@@ -213,6 +215,57 @@
     </main>
 
     <footer>
-
+        <div id="footerWrap">
+            <aside id="gazelleWrap">
+                <img id="footerLogo" src="./images/innosFullLogoHvid.png" alt="Innos Tools logo i hvid version" height="74" width="200" loading="lazy">
+                <p>Leverandør af innovativt værktøj, kemi og arbejdstøj til en bred 
+                    vifte af professionelle håndværksvirksomheder over hele landet.</p>
+                <p><b>OBS:</b> Vi gør opmærksom på, at vi giver 1 års reklamationsret fra købsdato.</p>
+                <img src="./images/børsen2018.png" alt="Bevis på Gazelle pris i 2018" height="132" width="320" loading="lazy">
+                <img src="./images/børsen2019.png" alt="Bevis på Gazelle pris i 2019" height="132" width="320" loading="lazy">
+            </aside>
+            <address id="kontaktFooter">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li>
+                        <span>Innos Tools ApS</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        <span>Essen 10 - DK-6000 Kolding</span>
+                    </li>
+                    <li>
+                        <a href="mailto:info@innos.dk">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>info@innos.dk</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+45%2028%20800%20600">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+45 28 80 06 00</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>CVR nr.: 25170423 </span>
+                    </li>
+                </ul>
+            </address>
+            <nav id="navFooter">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">Om os</a></li>
+                    <li><a href="#">Job hos Innos Tools</a></li>
+                    <li><a href="#">Handelsbetingelser Webshop</a></li>
+                    <li><a href="#">Salgs- & leveringsbetingelser</a></li>
+                    <li><a href="#">Kontakt Os</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="copyrightBar">
+            <span>Innostools - ©2023</span>
+            <a href="#">Cookie- & Privatlivspolitik</a>
+        </div>
     </footer>
 </body>
+</html>
