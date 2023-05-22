@@ -12,6 +12,13 @@ a {
     color: white;
 }
 
+:root {
+    --prim-blue: #0274be;
+    --second-blue: #205e87;
+    --kneelit-green: #9EC698;
+    --wow-orange: #EE7D41;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg) scale(0.5);
@@ -89,12 +96,11 @@ header i {
     height: 100vh;
     top: 0;
     right: -100vw;
-    background-color: lightskyblue;
+    background-color: var(--second-blue);
     z-index: 20;
     transition: 500ms;
 }
 #mobilMenu ul {
-    /* border: 4px solid magenta; */
     width: 100%;
     margin: 10vh 0 0 0;
 }
@@ -108,7 +114,7 @@ header i {
 }
 #mobilMenuOpen {
     padding: 10px 0 10px 14px;
-    border-left: 4px solid #0274be;
+    border-left: 4px solid var(--prim-blue);
 }
 
 #innosForside {
@@ -119,7 +125,7 @@ header i {
     position: relative;
     min-width: 100vw;
     min-height: 94vh;
-    filter: drop-shadow(0 2px 4px black);
+    box-shadow: 0 0 5px #000;
 }
 
 #bckSlider {
@@ -140,7 +146,7 @@ header i {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(120deg, #0274be, #205e87);
+    background-image: linear-gradient(120deg, var(--prim-blue), var(--second-blue));
     opacity: .3;
 }
 
@@ -157,7 +163,7 @@ header i {
 
 #spinningLogo {
     position: absolute;
-    z-index: 15;
+    z-index: 8;
     animation: spin 1500ms normal forwards;
 }
 
@@ -169,23 +175,22 @@ header i {
 #forsideTagline {
     opacity: 0;
     animation: fadeGrow 850ms linear 950ms normal forwards;
-    margin-bottom: 10vh;
+    margin-bottom: 6vh;
 }
 
 #mainCTABtn {
     opacity: 0;
-    background-color: #0274be;
+    background-color: var(--prim-blue);
     color: white;
     font-size: 22px;
     padding: 15px 20px;
-    /* outline: 2px solid white; */
-    filter: drop-shadow(0 2px 4px black);
+    box-shadow: 0 0 10px #000;
     border-radius: 50px;
     animation: fadeGrow 300ms linear 1500ms normal forwards;
 }
 #dropBtn {
     opacity: 0;
-    margin: 7vh 0 0 0;
+    margin: 4vh 0 0 0;
     height: 40px;
     width: 40px;
     padding: 13px;
@@ -194,26 +199,92 @@ header i {
     animation: fadeGrow 350ms linear 2200ms normal forwards;
 }
 
-main h2 {
+#content h2 {
     text-transform: uppercase;
     font-size: 30px;
+    text-align: center;
+    color: var(--prim-blue);
 }
 
 .mereBtn {
     display: inline-block;
-    outline: 2px solid #0274be;
-    color: #0274be;
+    outline: 3px solid var(--prim-blue);
     text-align: center;
     font-weight: bold;
-    padding: 10px;
+    color: #000;
+    padding: 10px 20px;
     width: 140px;
+    text-transform: uppercase;
+}
+
+#kategorier ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 95vw;
+}
+
+#kategorier li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 0 10px gray;
+    margin: 0 0 1.5em 0;
+}
+
+#kategorier li p {
+    height: 80px;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 4px;
+}
+
+.mereBtn:active, .mereBtn:focus, .mereBtn:hover {
+    transform: scale(1.1);
+    background-color: var(--prim-blue);
+}
+
+.titleWrap {
+    width: 100%;
+    padding: 1em 0px;
+    background-color: var(--prim-blue);
+}
+
+#katKneelit .mereBtn {
+    outline: 3px solid var(--kneelit-green);
+}
+#katKneelit .mereBtn:active, #katKneelit .mereBtn:focus, #katKneelit .mereBtn:hover{
+    background-color: var(--kneelit-green);
+}
+#kneelTitle {
+    background-color: var(--kneelit-green);
+}
+
+#katWow .mereBtn {
+    outline: 3px solid var(--wow-orange);
+}
+#katWow .mereBtn:active, #katWow .mereBtn:focus, #katWow .mereBtn:hover{
+    background-color: var(--wow-orange);
+}
+#wowTitle {
+    background-color: var(--wow-orange);
+}
+
+
+.titleWrap h3 {
+    color: black;
+    font-size: 25px;
+    text-align: center;
     text-transform: uppercase;
 }
 
 
 footer {
     width: 100vw;
-    background-color: #0274be;
+    background-color: var(--prim-blue);
     background-image: url("../images/footerBck.webp");
     background-repeat: repeat-x;
     background-position: center;
@@ -277,7 +348,7 @@ footer a:active, footer a:hover {
 
 #copyrightBar {
     width: 100vw;
-    background-color: #205e87;
+    background-color: var(--second-blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,8 +368,7 @@ footer a:active, footer a:hover {
         left: 0;
         right: 0;
         margin: 0 auto;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        border-radius: 0 0 50px 50px;
     }
 
     #mobilMenu, #mobilMenuOpen {
@@ -309,8 +379,8 @@ footer a:active, footer a:hover {
         display: block;
     }
 
-    #kategorier {
-
+    #content h2 {
+        font-size: 40px;
     }
 
     #kategorier ul {
@@ -319,6 +389,10 @@ footer a:active, footer a:hover {
         grid-template-rows: auto;
         justify-items: center;
         justify-content: center;
+        gap: 1em;
+    }
+    #kategorier li {
+        margin: 0;
     }
 
 
@@ -382,14 +456,18 @@ footer a:active, footer a:hover {
 
     #mainCTABtn:hover, #mainCTABtn:focus, #mainCTABtn::selection {
         background-color: white;
-        color: #0274be;
+        color: var(--prim-blue);
         outline: none;
         filter: unset;
     }
     #dropBtn:hover {
-        background-color: #0274be;
+        background-color: var(--prim-blue);
         outline: none;
-        filter: drop-shadow(0 2px 4px black);
+        box-shadow: 0 0 4px #000;
+    }
+
+    #content h2 {
+        font-size: 45px;
     }
     
     #kategorier ul {
@@ -397,6 +475,11 @@ footer a:active, footer a:hover {
         grid-template-columns: 350px 350px 350px 350px;
         justify-items: center;
         justify-content: center;
+        column-gap: 3em;
+    }
+
+    .titleWrap h3 {
+        font-size: 35px;
     }
 
 
@@ -407,7 +490,7 @@ footer a:active, footer a:hover {
     }
 
     #footerWrap h3 {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     #gazelleWrap {
