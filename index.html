@@ -137,9 +137,11 @@
                     <i class="fa-brands fa-instagram" title="Instagram"></i>
                 </nav>
                 <aside id="nyhedsBrev">
-                    <h2>Nyhedsbrev</h2>
-                    <h3>Få gode tilbud i din indbakke</h3>
-                    <form action="#">
+                    <div id="brevWrap">
+                        <h2>Nyhedsbrev</h2>
+                        <h3>Få gode tilbud i din indbakke</h3>
+                    </div>
+                    <form action="#" id="brevForm">
                         <input type="text" name="navn" placeholder="Navn">
                         <input type="email" name="email" placeholder="Din e-mail">
                         <select name="erhverv" id="erhverv" required>
@@ -190,7 +192,7 @@
                             <option value="Andet">Andet</option>
                           </select>
                         <input type="checkbox" name="checkbox" id="checkbox" required>
-                        <label for="checkbox">Godkend <a href="#" target="blank">Samtykke</a></label>
+                        <label for="checkbox">Godkend samtykke: <a href="#" target="blank">Privatlivspolitik</a></label>
                         <input type="submit" name="submit" value="Tildmeld nu">
                     </form>
                 </aside>

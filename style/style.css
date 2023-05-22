@@ -220,6 +220,7 @@ header i {
 #kategorier ul {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     width: 95vw;
 }
@@ -230,6 +231,7 @@ header i {
     align-items: center;
     row-gap: 1em;
     width: 100%;
+    max-width: 350px;
     height: 400px;
     box-shadow: 0 0 10px gray;
     margin: 0 0 1.5em 0;
@@ -286,12 +288,13 @@ header i {
     flex-direction: column;
     width: 100%;
     max-width: 1400px;
-    padding: 1em;
-    margin: 0 auto;
+    padding: 4em 1.5em;
+    margin: 2em 0;
+    box-shadow: 0 0 10px gray;
     background-color: var(--prim-blue);
 }
 
-#nyhedsBrev input, #nyhedsBrev select {
+input[type=text], input[type=email], input[type=submit], #nyhedsBrev select {
     width: 100%;
     font-size: 20px;
     height: 50px;
@@ -302,13 +305,32 @@ header i {
     border: none;
 }
 
+#brevWrap h2, #brevWrap h3 {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type=checkbox] {
+    margin: 1em 0;
+}
+
+input[type=submit] {
+    text-transform: uppercase;
+}
+input[type=submit]:active, input[type=submit]:focus, input[type=submit]:hover {
+    cursor: pointer;
+    font-weight: bold;
+    transform: scale(1.02);
+}
+
 footer {
     width: 100vw;
     background-color: var(--prim-blue);
     background-image: url("../images/footerBck.webp");
     background-repeat: repeat-x;
     background-position: center;
-    margin-top: 1em;
+    margin-top: 4em;
     color: white;
     font-size: 20px;
 }
@@ -396,7 +418,19 @@ footer a:active, footer a:hover {
         margin: 0;
     }
 
+    #kontaktOs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    #brevWrap h2 {
+        text-align: left;
+    }
+
+    input[type=text], input[type=email] {
+        width: 49.5%;
+    }
 
     
     #footerWrap {
@@ -449,7 +483,9 @@ footer a:active, footer a:hover {
         height: 80px;
         width: 98%;
         max-width: 1920px;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 0.4fr 1.2fr 0.4fr;
+        justify-items: center;
         left: 0;
         right: 0;
         padding: 0;
@@ -470,13 +506,20 @@ footer a:active, footer a:hover {
         flex-direction: row;
         align-items: center;
         column-gap: 2em;
-        padding: 0 2em;
+        padding: 0 4em;
         height: 100%;
-        border-radius: 0 0 5px 5px;
-        background-color: var(--prim-blue);
+        border-radius: 50px;
+        border: 4px solid var(--prim-blue);
     }
     #primNav ul li {
         display: inline-block;
+    }
+    #primNav a {
+        color: var(--prim-blue);
+        font-weight: bold;
+    }
+    #primNav a:hover {
+        text-decoration: underline;
     }
 
     #skipBtn {
@@ -505,17 +548,34 @@ footer a:active, footer a:hover {
     }
     
     #kategorier ul {
-        display: grid;
-        grid-template-columns: 350px 350px 350px 350px;
-        justify-items: center;
-        justify-content: center;
-        column-gap: 3em;
+        display: flex;
+        flex-direction: row;
+    }
+    #kategorier ul li {
+        max-width: 350px;
     }
 
     .titleWrap h3 {
         font-size: 35px;
     }
 
+    #nyhedsBrev {
+        display: flex;
+        flex-direction: row;
+        padding: 4em 3em;
+        column-gap: 5em;
+    }
+
+    #brevWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        font-size: 25px;
+    }
+    #brevWrap h2 {
+        font-size: 65px;
+    }
 
     #footerWrap {
         display: flex;
