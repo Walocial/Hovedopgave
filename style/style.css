@@ -49,7 +49,7 @@ body {
 header nav {
     z-index: 10;
 }
-#pcNav {
+#primNav {
     display: none;
 }
 header {
@@ -273,7 +273,6 @@ header i {
     background-color: var(--wow-orange);
 }
 
-
 .titleWrap h3 {
     color: black;
     font-size: 25px;
@@ -281,6 +280,27 @@ header i {
     text-transform: uppercase;
 }
 
+
+#nyhedsBrev {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    padding: 1em;
+    margin: 0 auto;
+    background-color: var(--prim-blue);
+}
+
+#nyhedsBrev input, #nyhedsBrev select {
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 15px 0 0 0;
+    color: var(--prim-blue);
+    background-color: white;
+    border: none;
+}
 
 footer {
     width: 100vw;
@@ -360,25 +380,6 @@ footer a:active, footer a:hover {
 /* --------------------- iPad Version -----------------------*/ 
 @media screen and (min-width: 725px) {
 
-    header {
-        height: 80px;
-        width: 98%;
-        max-width: 1920px;
-        justify-content: space-around;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        border-radius: 0 0 50px 50px;
-    }
-
-    #mobilMenu, #mobilMenuOpen {
-        display: none;
-    }
-
-    #pcMenu {
-        display: block;
-    }
-
     #content h2 {
         font-size: 40px;
     }
@@ -444,6 +445,39 @@ footer a:active, footer a:hover {
 
 /* --------------------- Desktop Version -----------------------*/ 
 @media screen and (min-width: 1200px) {
+    header {
+        height: 80px;
+        width: 98%;
+        max-width: 1920px;
+        justify-content: space-around;
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin: 0 auto;
+        border-radius: 0 0 50px 50px;
+    }
+    
+    #mobilMenu, #mobilMenuOpen {
+        display: none;
+    }
+
+    #primNav {
+        height: 100%;
+        display: block;
+    }
+    #primNav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2em;
+        padding: 0 2em;
+        height: 100%;
+        border-radius: 0 0 5px 5px;
+        background-color: var(--prim-blue);
+    }
+    #primNav ul li {
+        display: inline-block;
+    }
 
     #skipBtn {
         top: -50em;

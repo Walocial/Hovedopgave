@@ -28,24 +28,28 @@
         <a href="#">
             <img src="images/innosFullLogo.webp" alt="Innos Tools Logo - Hjem Knap" height="45" width="128">
         </a>
-        <i class="fa-solid fa-bars" id="mobilMenuOpen" onclick="showMenu()"></i>
-        <nav id="pcNav">
+        <nav id="primNav">
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><a href="#">Produkter</a></li>
+                <li><a href="#">Kneel-it</a></li>
+                <li><a href="#">Service og Support</a></li>
+                <li><a href="#">Kontakt os</a></li>
+                <li><a href="#">Om Innos</a></li>
             </ul>
         </nav>
+        <form action="#">
+            <input type="search" id="searchBar" name="searchBar" placeholder="Søg efter produkter...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <i class="fa-solid fa-bars" id="mobilMenuOpen" onclick="showMenu()"></i>
         <nav id="mobilMenu">
             <i class="fa-solid fa-x" onclick="hideMenu()"></i>
             <ul>
-                <li>Produkter</li>
-                <li>Kneel-it</li>
-                <li>Service og Support</li>
-                <li>Kontakt os</li>
-                <li>Om Innos</li>
+                <li><a href="#">Produkter</a></li>
+                <li><a href="#">Kneel-it</a></li>
+                <li><a href="#">Service og Support</a></li>
+                <li><a href="#">Kontakt os</a></li>
+                <li><a href="#">Om Innos</a></li>
             </ul>
         </nav>
     </header>
@@ -133,12 +137,59 @@
                     <i class="fa-brands fa-instagram" title="Instagram"></i>
                 </nav>
                 <aside id="nyhedsBrev">
-                    <h2>Nyehdesmail</h2>
-                    <h3>Gode tilbud i din indbakke</h3>
+                    <h2>Nyhedsbrev</h2>
+                    <h3>Få gode tilbud i din indbakke</h3>
                     <form action="#">
                         <input type="text" name="navn" placeholder="Navn">
                         <input type="email" name="email" placeholder="Din e-mail">
-                        <input type="checkbox" name="checkbox" id="checkbox" required="required">
+                        <select name="erhverv" id="erhverv" required>
+                            <option selected disabled value="">Vælg erhverv</option>
+                            <option value="Auto">Auto</option>
+                            <option value="Autolakerer">Autolakerer</option>
+                            <option value="Boligforeninger">Boligforeninger</option>
+                            <option value="Brolægger">Brolægger</option>
+                            <option value="Campingpladser">Campingpladser</option>
+                            <option value="Cykelhandler">Cykelhandler</option>
+                            <option value="Dækservice">Dækservice</option>
+                            <option value="Efterskoler">Efterskoler</option>
+                            <option value="Elektriker">Elektriker</option>
+                            <option value="Entreprenører">Entreprenører</option>
+                            <option value="Folkeskoler">Folkeskoler</option>
+                            <option value="Gartner">Gartner</option>
+                            <option value="Gasservice">Gasservice</option>
+                            <option value="Glarmester">Glarmester</option>
+                            <option value="Godser">Godser</option>
+                            <option value="Gulvlægger">Gulvlægger</option>
+                            <option value="Kloakservice">Kloakservice</option>
+                            <option value="Kølerfirma">Kølerfirma</option>
+                            <option value="Landbrug">Landbrug</option>
+                            <option value="Lastvognsværksteder">Lastvognsværksteder</option>
+                            <option value="Maler">Maler</option>
+                            <option value="Maskinstationer">Maskinstationer</option>
+                            <option value="Materialegård">Materialegård</option>
+                            <option value="Millitær">Millitær</option>
+                            <option value="Minkfarme">Minkfarme</option>
+                            <option value="Murer">Murer</option>
+                            <option value="Oliefyrsservice">Oliefyrsservice</option>
+                            <option value="Ophugger">Ophugger</option>
+                            <option value="Produkthandler">Produkthandler</option>
+                            <option value="Produktionsfirma">Produktionsfirma</option>
+                            <option value="Slagterier/Mejerier">Slagterier/Mejerier</option>
+                            <option value="Smede">Smede</option>
+                            <option value="Snedker">Snedker</option>
+                            <option value="Svineproducenter">Svineproducenter</option>
+                            <option value="Sygehuse">Sygehuse</option>
+                            <option value="Tagdækker">Tagdækker</option>
+                            <option value="Tekn. skoler og Fagskoler">Tekn. skoler og Fagskoler</option>
+                            <option value="Tømrer">Tømrer</option>
+                            <option value="Vandværker">Vandværker</option>
+                            <option value="Varmeværker">Varmeværker</option>
+                            <option value="Ventilationsfirma">Ventilationsfirma</option>
+                            <option value="Vognmænd">Vognmænd</option>
+                            <option value="VVS/Blikkeslager">VVS/Blikkeslager</option>
+                            <option value="Andet">Andet</option>
+                          </select>
+                        <input type="checkbox" name="checkbox" id="checkbox" required>
                         <label for="checkbox">Godkend <a href="#" target="blank">Samtykke</a></label>
                         <input type="submit" name="submit" value="Tildmeld nu">
                     </form>
