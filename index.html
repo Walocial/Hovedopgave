@@ -28,18 +28,47 @@
         <a href="#" id="hjemKnap">
             <img src="images/innosFullLogo.webp"  alt="Innos Tools Logo - Hjem Knap" height="45" width="128">
         </a>
-        <nav id="primNav">
-            <ul>
-                <li><a href="#">Produkter</a></li>
-                <li><a href="#">Kneel-it</a></li>
-                <li><a href="#">Service og Support</a></li>
-                <li><a href="#">Kontakt os</a></li>
-                <li><a href="#">Om Innos</a></li>
+        <nav id="primNavWrap">
+            <ul id="primNav">
+                <li class="primLi">
+                    <a href="#">Produkter <i class="fas fa-caret-down navIcon"></i></a>
+                    <ul class="subNav" id="subProdukter">
+                        <li><a href="#">Værktøj</a></li>
+                        <li><a href="#">Kemi og disinfektion</a></li>
+                        <li><a href="#">Arbejdstøj og fodtøj</a></li>
+                    </ul>
+                </li>
+                <li class="primLi">
+                    <a href="#">Kneel-it</a>
+                </li>
+                <li class="primLi">
+                    <a href="#">Service og Support <i class="fas fa-caret-down navIcon"></i></a>
+                    <ul class="subNav" id="subSupport">
+                        <li><a href="#">Book et møde</a></li>
+                        <li><a href="#">Få et tilbud</a></li>
+                        <li><a href="#">Sikkerhedsdatablade</a></li>
+                        <li><a href="#">Belastningsskema | ofset</a></li>
+                        <li><a href="#">Belastningsskema til ut42</a></li>
+                        <li><a href="#">Belastningsskema til ut44</a></li>
+                    </ul>
+                </li>
+                <li class="primLi"><a href="#">Kontakt os</a></li>
+                <li class="primLi">
+                    <a href="#">Om Innos <i class="fas fa-caret-down navIcon"></i></a>
+                    <ul class="subNav" id="subOmos">
+                        <li><a href="#">Mission, vision, mål & værdier</a></li>
+                        <li><a href="#">Team Innos</a></li>
+                        <li><a href="#">Nyheder</a></li>
+                        <li><a href="#">Job hos innos</a></li>
+                        <li><a href="#">Ressourcer</a></li>
+                        <li><a href="#">Referencer</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <form action="#" id="searchWrapper">
             <input type="search" id="searchBar" class="hidden" name="Søgefelt" placeholder="Søg efter produkter...">
-            <button type="submit" name="Bekræt Søgning"><i class="fa fa-search"></i></button>
+            <button type="submit" name="searchBtn"><i class="fa fa-search"></i>Søg</button>
         </form>
         <nav  id="mobilMenuOpen">
             <i class="fa fa-search" id="searchIcon" onclick="showSearch()"></i>
@@ -119,7 +148,9 @@
                     </li>
                 </ul>
             </section>
-
+            <div class="seperator">
+                <i class="fas fa-charet-down"></i>
+            </div>
             <section id="kneelIt">
                 <h2>Kneel-It<br><span>knæpudevogn</span></h2>
                 <a href="#" class="mereBtn">Mere om fordele</a>
@@ -136,16 +167,16 @@
                 <nav id="socials">
                     <ul>
                         <li>
-                            <a href=""><i class="fa-brands fa-linkedin" title="Linked In"></i></a>
+                            <a href="https://www.linkedin.com/company/innos-tools/"><i class="fa-brands fa-linkedin" title="Linked In"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fa-brands fa-youtube" title="Youtube"></i></a>
+                            <a href="https://www.youtube.com/channel/UC_0Z688CLDJD-wDzZvScigQ?"><i class="fa-brands fa-youtube" title="Youtube"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fa-brands fa-facebook-f" title="Facebook"></i></a>
+                            <a href="https://www.facebook.com/innostools/"><i class="fa-brands fa-facebook-f" title="Facebook"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fa-brands fa-instagram" title="Instagram"></i></a>
+                            <a href="https://www.instagram.com/innostools"><i class="fa-brands fa-instagram" title="Instagram"></i></a>
                         </li>
                     </ul>
                 </nav>
