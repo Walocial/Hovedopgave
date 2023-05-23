@@ -12,6 +12,10 @@ a {
     color: white;
 }
 
+.hidden {
+    display: none;
+}
+
 :root {
     --prim-blue: #0274be;
     --second-blue: #205e87;
@@ -68,6 +72,10 @@ header i {
     font-size: 40px;
 }
 
+#hjemKnap {
+    
+}
+
 #skipBtn {
     position: absolute;
     top: -50em;
@@ -112,9 +120,32 @@ header i {
     text-align: left;
     font-size: 30px;
 }
-#mobilMenuOpen {
+#burgerMenu {
     padding: 10px 0 10px 14px;
     border-left: 4px solid var(--prim-blue);
+} 
+
+#searchWrapper {
+    display: flex;
+}
+
+#searchWrapper input[type=search] {
+    position: fixed;
+    bottom: -46px;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 10px;
+}
+
+#searchIcon {
+    color: var(--prim-blue);
+    font-size: 35px;
+    padding: 5px 10px;
+}
+
+#searchWrapper button {
+    display: none;
 }
 
 #innosForside {
@@ -282,6 +313,17 @@ header i {
     text-transform: uppercase;
 }
 
+#socials ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.5em;
+    margin: 10px 0 0 0;
+}
+#socials a {
+    font-size: 30px;
+    color: var(--prim-blue);
+}
 
 #nyhedsBrev {
     display: flex;
@@ -291,7 +333,8 @@ header i {
     padding: 4em 1.5em;
     margin: 2em 0;
     box-shadow: 0 0 10px gray;
-    background-color: var(--prim-blue);
+    color: white;
+    background-color: var(--second-blue);
 }
 
 input[type=text], input[type=email], input[type=submit], #nyhedsBrev select {
@@ -318,10 +361,11 @@ input[type=checkbox] {
 input[type=submit] {
     text-transform: uppercase;
 }
-input[type=submit]:active, input[type=submit]:focus, input[type=submit]:hover {
+input[type=submit]:active, input[type=submit]:focus, input[type=submit]:hover,
+input[type=checkbox]:active, input[type=checkbox]:focus, input[type=checkbox]:hover {
     cursor: pointer;
     font-weight: bold;
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 footer {
@@ -333,6 +377,7 @@ footer {
     margin-top: 4em;
     color: white;
     font-size: 20px;
+    box-shadow: 0 0 10px gray;
 }
 
 #footerWrap {
@@ -484,7 +529,7 @@ footer a:active, footer a:hover {
         width: 98%;
         max-width: 1920px;
         display: grid;
-        grid-template-columns: 0.4fr 1.2fr 0.4fr;
+        grid-template-columns: 0.2fr 0.8fr 0.4fr;
         justify-items: center;
         left: 0;
         right: 0;
@@ -493,13 +538,48 @@ footer a:active, footer a:hover {
         border-radius: 0 0 50px 50px;
     }
     
-    #mobilMenu, #mobilMenuOpen {
+    #mobilMenu, #mobilMenuOpen, #searchIcon {
         display: none;
     }
+
+    #searchWrapper {
+        display: flex;
+        width: 80%;
+    }
+    
+    #searchWrapper input[type=search] {
+        position: static;
+        bottom: unset;
+        left: 0;
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+    
+    #searchWrapper button {
+        display: block;
+        border: none;
+        padding: 1em;
+        background-color: var(--second-blue);
+    }
+    #searchWrapper button i {
+        font-size: 18px;
+        color: white;
+    }
+    #searchWrapper button:hover {
+        cursor: pointer;
+        background-color: var(--prim-blue);
+    }
+
+    #searchBar {
+        display: block;
+    }
+    
 
     #primNav {
         height: 100%;
         display: block;
+        justify-self: end;
     }
     #primNav ul {
         display: flex;
@@ -530,6 +610,7 @@ footer a:active, footer a:hover {
     #skipBtn:active, #skipBtn:focus{
         top: 10px;
     }
+    
 
     #mainCTABtn:hover, #mainCTABtn:focus, #mainCTABtn::selection {
         background-color: white;

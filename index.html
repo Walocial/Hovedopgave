@@ -25,8 +25,8 @@
 <body>
     <header>
         <a href="#content" id="skipBtn">Gå til indholdet</a>
-        <a href="#">
-            <img src="images/innosFullLogo.webp" alt="Innos Tools Logo - Hjem Knap" height="45" width="128">
+        <a href="#" id="hjemKnap">
+            <img src="images/innosFullLogo.webp"  alt="Innos Tools Logo - Hjem Knap" height="45" width="128">
         </a>
         <nav id="primNav">
             <ul>
@@ -37,11 +37,14 @@
                 <li><a href="#">Om Innos</a></li>
             </ul>
         </nav>
-        <form action="#">
-            <input type="search" id="searchBar" name="searchBar" placeholder="Søg efter produkter...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+        <form action="#" id="searchWrapper">
+            <input type="search" id="searchBar" class="hidden" name="Søgefelt" placeholder="Søg efter produkter...">
+            <button type="submit" name="Bekræt Søgning"><i class="fa fa-search"></i></button>
         </form>
-        <i class="fa-solid fa-bars" id="mobilMenuOpen" onclick="showMenu()"></i>
+        <nav  id="mobilMenuOpen">
+            <i class="fa fa-search" id="searchIcon" onclick="showSearch()"></i>
+            <i class="fa-solid fa-bars" id="burgerMenu" onclick="showMenu()"></i> 
+        </nav>
         <nav id="mobilMenu">
             <i class="fa-solid fa-x" onclick="hideMenu()"></i>
             <ul>
@@ -86,7 +89,7 @@
                         <div id="toolsTitle" class="titleWrap">
                             <h3>Værktøj</h3>
                         </div>
-                        <img src="./images/toolsLogoBlue.svg" alt="" height="100" width="100" loading="lazy">
+                        <img src="./images/toolsLogoBlue.svg" alt="Et logo billede af en værktøjskasse med en hammer, skruetrækker og skruenøgle i" height="100" width="100" loading="lazy">
                         <p>Værktøj fra Innos er kendetegnet ved høj kvalitet og fokus på kontinuerlig innovation.</p>
                         <a href="#" class="mereBtn">Mere om Værktøj</a>
                     </li>
@@ -94,7 +97,7 @@
                         <div id="kneelTitle" class="titleWrap">
                             <h3>Kneel-It</h3>
                         </div>
-                        <img src="./images/innosLogo.webp" alt="" height="100" width="100" loading="lazy">
+                        <img src="./images/kneelitLogoGreen.svg" alt="Logo af mærket Kneel-It, det er et tekst-baseret logo med ordet Kneel-It skrevet" height="100" width="100" loading="lazy">
                         <p>Kneel-It er en innovativ knæpudevogn der øger effektivitet, produktivitet og livskvalitet. </p>
                         <a href="#" class="mereBtn">Mere om Kneel-It</a>
                     </li>
@@ -130,11 +133,21 @@
             <section id="kontaktOs">
                 <h2>Hold Kontakten</h2>
                 <p>Du kan finde os på følgende sociale medier, hvor du kan finde produktnyheder og andet nyt fra os</p>
-                <nav class="socials">
-                    <i class="fa-brands fa-linkedin" title="Linked In"></i>
-                    <i class="fa-brands fa-youtube" title="Youtube"></i>
-                    <i class="fa-brands fa-facebook-f" title="Facebook"></i>
-                    <i class="fa-brands fa-instagram" title="Instagram"></i>
+                <nav id="socials">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fa-brands fa-linkedin" title="Linked In"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-youtube" title="Youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-facebook-f" title="Facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-instagram" title="Instagram"></i></a>
+                        </li>
+                    </ul>
                 </nav>
                 <aside id="nyhedsBrev">
                     <div id="brevWrap">
@@ -144,7 +157,7 @@
                     <form action="#" id="brevForm">
                         <input type="text" name="navn" placeholder="Navn">
                         <input type="email" name="email" placeholder="Din e-mail">
-                        <select name="erhverv" id="erhverv" required>
+                        <select name="erhverv" id="erhverv" title="Vælg hvilket ervherv du gerne vil modtage nyhedsbreve omkring" required>
                             <option selected disabled value="">Vælg erhverv</option>
                             <option value="Auto">Auto</option>
                             <option value="Autolakerer">Autolakerer</option>
@@ -191,7 +204,7 @@
                             <option value="VVS/Blikkeslager">VVS/Blikkeslager</option>
                             <option value="Andet">Andet</option>
                           </select>
-                        <input type="checkbox" name="checkbox" id="checkbox" required>
+                        <input type="checkbox" name="checkbox" id="checkbox" title="Bekræft samtykke af Innos Tools' Cookie- & Privatlivspolitik for at fortsætte" required>
                         <label for="checkbox">Godkend samtykke: <a href="#" target="blank">Privatlivspolitik</a></label>
                         <input type="submit" name="submit" value="Tildmeld nu">
                     </form>

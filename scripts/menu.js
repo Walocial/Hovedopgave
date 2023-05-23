@@ -7,3 +7,15 @@ function showMenu(){ //Sætter mobil menu's højre position til 0 (viser menuen)
 function hideMenu(){ //Sætter mobil menu's højre position til -100vw (skjuler menuen)
     mobilMenu.style.right = "-100vw";
 }
+
+//Vis eller skjul søgefelt
+const searchBar = document.getElementById("searchBar");
+
+function showSearch() {
+    if(searchBar.classList.contains("hidden")) {
+        searchBar.classList.remove("hidden")
+        searchBar.focus();
+    } else {
+        searchBar.classList.add("hidden");
+    }
+}
