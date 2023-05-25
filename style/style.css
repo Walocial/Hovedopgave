@@ -149,6 +149,16 @@ header i {
     display: none;
 }
 
+#toTopKnap {
+    position: fixed;
+    padding: 1em 1.1em;
+    bottom: 30px;
+    right: 20px;
+    box-shadow: 0 0 8px #000;
+    background-color: var(--prim-blue);
+    z-index: 25;
+}
+
 #innosForside {
     display: flex;
     justify-content: center;
@@ -236,6 +246,9 @@ header i {
     font-size: 30px;
     text-align: center;
     color: var(--prim-blue);
+}
+#content p {
+    font-size: 20px;
 }
 
 .mereBtn {
@@ -341,6 +354,7 @@ header i {
     height: 4px;
     position: relative;
     margin: 20px;
+    border: none;
     background-color: var(--second-blue);
 }
 
@@ -365,9 +379,7 @@ header i {
     line-height: .8em;
     margin: 0 0 .5em 0;
 }
-#faq .titleWrap span {
-    font-size: 18px;
-}
+
 #faq .mereBtn {
     margin: .8em 0;
 }
@@ -381,6 +393,7 @@ header i {
 
 .faqWrap p{
     margin: 0 0 1em 0;
+    line-height: 1.5em;
 }
 .faqWrap h4, .faqWrap p {
     width: 100%;
@@ -398,6 +411,7 @@ header i {
     margin: 0 auto 1em auto;
 }
 .faqUl li {
+    line-height: 1.5em;
     list-style-type: square;
 }
 
@@ -569,8 +583,21 @@ footer a:active, footer a:hover {
 /* --------------------- iPad Version -----------------------*/ 
 @media screen and (min-width: 725px) {
 
+    #forsideh1 {
+        font-size: 75px;
+    }
+
+    #toTopKnap {
+        padding: 1em 1.15em;
+        font-size: 20px;
+    }
+
     #content h2 {
-        font-size: 40px;
+        font-size: 50px;
+    }
+
+    .titleWrap h3, #faq .titleWrap {
+        font-size: 35px;
     }
 
     #kategorier ul {
@@ -584,6 +611,10 @@ footer a:active, footer a:hover {
     #kategorier li {
         margin: 0;
     }
+
+    .faqWrap p, .faqWrap li {
+        font-size: 20px;
+    } 
 
     #kontaktOs {
         display: flex;
@@ -599,7 +630,6 @@ footer a:active, footer a:hover {
         width: 49.5%;
     }
 
-    
     #footerWrap {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
@@ -785,8 +815,25 @@ footer a:active, footer a:hover {
         box-shadow: 0 0 4px #000;
     }
 
+    #forsideh1 {
+        font-size: 80px;
+    }
+    #forsideTagline {
+        font-size: 40px;
+    }
+
+    #toTopKnap {
+        padding: .5em .7em;
+        font-size: 35px;
+    }
+    #toTopKnap:hover {
+        cursor: pointer;
+        color: white;
+    }
+
     #content h2 {
-        font-size: 45px;
+        padding: 0 1em;
+        font-size: 65px;
     }
     
     #kategorier ul {
@@ -798,7 +845,7 @@ footer a:active, footer a:hover {
     }
 
     .titleWrap h3 {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     #faq article {
@@ -807,18 +854,18 @@ footer a:active, footer a:hover {
         width: 100%;
         max-width: 1600px;
         row-gap: unset;
-        column-gap: 4em;
+        column-gap: 1em;
         margin: 2em 0;
     }
     #moreWorkWear {
         flex-direction: row-reverse !important;
     }
     .faqWrap {
-        width: 50vw;
+        width: 100%;
         max-width: 650px;
     }
     .faqImg {
-        height: 60vh;
+        height: 700px;
     }
     #faqKneelBck {
         border-top: 10px solid var(--kneelit-green);
@@ -827,6 +874,13 @@ footer a:active, footer a:hover {
     #faqWowBck {
         border-top: 10px solid var(--wow-orange);
         border-bottom: none;
+        height: 900px;
+    }
+
+    #faq .titleWrap {
+        font-size: 40px;
+        padding: .8em 0;
+        line-height: .6em;
     }
 
     #nyhedsBrev {
@@ -844,6 +898,7 @@ footer a:active, footer a:hover {
         font-size: 25px;
     }
     #brevWrap h2 {
+        padding: 0;
         font-size: 65px;
     }
 

@@ -19,3 +19,20 @@ function showSearch() {
         searchBar.classList.add("hidden");
     }
 }
+
+//Tilbage til top knap
+const toTopBtn = document.getElementById("toTopKnap");
+
+function showOnScroll() {
+  let y = window.scrollY;
+  if (y >= 800) {
+    toTopBtn.classList.remove("hidden");
+  } else {
+    toTopBtn.classList.add("hidden")
+  }
+};
+window.addEventListener("scroll", showOnScroll);
+
+function backToTop() {
+    window.scrollTo({top: 0});
+}
