@@ -73,10 +73,6 @@ header i {
     font-size: 40px;
 }
 
-#hjemKnap {
-    
-}
-
 #skipBtn {
     position: absolute;
     top: -50em;
@@ -94,7 +90,6 @@ header i {
     top: 5px;
 }
 
-
 #mobilMenu {
     display: flex;
     flex-direction: column;
@@ -111,12 +106,12 @@ header i {
 }
 #mobilMenu ul {
     width: 100%;
-    margin: 10vh 0 0 0;
+    margin: 1vh 0 0 0;
 }
 #mobilMenu li {
     border: 2px solid black;
     width: 90%;
-    margin: 30px auto;
+    margin: 4px auto;
     padding: 4px 8px;
     text-align: left;
     font-size: 30px;
@@ -124,7 +119,7 @@ header i {
 #burgerMenu {
     padding: 10px 0 10px 14px;
     border-left: 4px solid var(--prim-blue);
-} 
+}
 
 #searchWrapper {
     display: flex;
@@ -262,11 +257,35 @@ header i {
     text-transform: uppercase;
 }
 
+#forsideOmos {
+    width: 100vw;
+    box-shadow: 0 0 10px gray;
+    padding: 2em 0 0 0;
+    margin: 0 0 3em 0;
+}
+#omOsWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 2em 1em;
+    margin: 0 auto;
+}
+#omOsWrap p {
+    line-height: 1.4em;
+    margin: 0 0 1em 0;
+}
+#omOsWrap a {
+    margin: 1em 0 0 0;
+}
+
+
 #kategorier ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    margin: 2em auto 0 auto;
     width: 95vw;
 }
 
