@@ -8,17 +8,6 @@ function hideMenu(){ //Sætter mobil menu's højre position til -100vw (skjuler 
     mobilMenu.style.right = "-100vw";
 }
 
-//Vis undermenu i mobil menu 
-let openItem = (subMenu) =>{
-    this.subMenu = document.getElementById(subMenu);
-
-    if(this.subMenu.classList.contains("hidden")) {
-        this.subMenu.classList.remove("hidden");
-    } else {
-        this.subMenu.classList.add("hidden");
-    }
-}
-
 //Vis eller skjul søgefelt
 const searchBar = document.getElementById("searchBar");
 
