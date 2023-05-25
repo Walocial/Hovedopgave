@@ -19,6 +19,7 @@ a {
 :root {
     --prim-blue: #0274be;
     --second-blue: #205e87;
+    --kemi-teal: #008080;
     --kneelit-green: #9EC698;
     --wow-orange: #EE7D41;
 }
@@ -272,7 +273,7 @@ header i {
     height: 80px;
     font-size: 20px;
     text-align: center;
-    padding: 0 4px;
+    padding: 0 12px;
 }
 
 .mereBtn:active, .mereBtn:focus, .mereBtn:hover {
@@ -304,6 +305,16 @@ header i {
 }
 .wowTitle {
     background-color: var(--wow-orange);
+}
+
+.kemiFarve {
+    outline: 3px solid var(--kemi-teal);
+}
+.kemiFarve:active, .kemiFarve:focus, .kemiFarve:hover{
+    background-color: var(--kemi-teal);
+}
+.kemiTitle {
+    background-color: var(--kemi-teal);
 }
 
 .titleWrap h3 {
@@ -391,18 +402,32 @@ header i {
 }
 
 .faqImg {
+    position: relative;
     height: 40vh;
     width: 100%;
     background-position: center;
     background-size: cover;
 }
+.faqImg .seperator {
+    margin: .5em 0 0 0;
+    position: absolute;
+    top: 0;
+}
 #faqKneelBck {
     background-image: url("../images/kneelitBck.webp");
     border-bottom: 10px solid var(--kneelit-green);
 }
+#faqKneelBck .seperator hr {
+    background-color: var(--kneelit-green);
+    border: none;
+}
 #faqWowBck {
     background-image: url("../images/wowBck.webp");
     border-bottom: 10px solid var(--wow-orange);
+}
+#faqWowBck .seperator hr {
+    background-color: var(--wow-orange);
+    border: none;
 }
 
 #kontaktOs p {
@@ -786,11 +811,14 @@ footer a:active, footer a:hover {
         margin: 2em 0;
     }
     #moreWorkWear {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse !important;
+    }
+    .faqWrap {
+        width: 50vw;
+        max-width: 650px;
     }
     .faqImg {
         height: 60vh;
-        width: 80vw;
     }
     #faqKneelBck {
         border-top: 10px solid var(--kneelit-green);
