@@ -102,19 +102,29 @@ header i {
     right: -100vw;
     background-color: var(--second-blue);
     z-index: 20;
-    transition: 500ms;
+    transition: 250ms;
 }
-#mobilMenu ul {
+#mobileNav {
     width: 100%;
     margin: 1vh 0 0 0;
 }
-#mobilMenu li {
-    border: 2px solid black;
+#mobileNav>li {
     width: 90%;
     margin: 4px auto;
     padding: 4px 8px;
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
+}
+#mobileNav li i {
+    margin: 0 0 0 5px;
+    font-size: 25px;
+    color: white;
+    transition: 200ms;
+}
+.mobileSubNav li{
+    font-size: 20px;
+    padding: 0 0 0 10px;
+    margin: 8px 0;
 }
 #burgerMenu {
     padding: 10px 0 10px 14px;
@@ -174,7 +184,7 @@ header i {
     z-index: -1;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
 }
 #bckSlider::after {
     content: "";
@@ -602,6 +612,17 @@ footer a:active, footer a:hover {
 /* --------------------- iPad Version -----------------------*/ 
 @media screen and (min-width: 725px) {
 
+    #mobileNav>li {
+        font-size: 55px;
+    }
+    #mobileNav li i {
+        font-size: 55px;
+    }
+    .mobileSubNav li{
+        font-size: 40px;
+        padding: 0 0 0 30px;
+    }
+
     #forsideh1 {
         font-size: 75px;
     }
@@ -694,6 +715,11 @@ footer a:active, footer a:hover {
 
 /* --------------------- Desktop Version -----------------------*/ 
 @media screen and (min-width: 1200px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    
     header {
         height: 80px;
         width: 98%;
@@ -707,7 +733,7 @@ footer a:active, footer a:hover {
         margin: 0 auto;
         border-radius: 0 0 50px 50px;
     }
-    
+
     #mobilMenu, #mobilMenuOpen, #searchIcon {
         display: none;
     }

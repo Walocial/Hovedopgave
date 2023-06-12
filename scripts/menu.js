@@ -8,6 +8,29 @@ function hideMenu(){ //Sætter mobil menu's højre position til -100vw (skjuler 
     mobilMenu.style.right = "-100vw";
 }
 
+//Dropdown mobil menu
+let mobileDropdwn = (thisBtn, targetSubNav) => {
+  this.thisBtn = document.getElementById(thisBtn); //Henter ID på knappen
+  this.targetSubNav = document.getElementById(targetSubNav); //Henter ID på den subnav menu som skal vises
+  const allDrpIcons = document.querySelectorAll(".mbdpIcon"); //Henter alle drop down ikonerne
+  const allSubNavs = document.querySelectorAll(".mobileSubNav"); //Henter alle subnavs
+  let subnavClass = this.targetSubNav.classList; //Variable der gør functionen nedenfor mere overskuelig
+
+  if (subnavClass.contains("hidden")) {
+    allSubNavs.forEach((element) => { //Skjuler alle andre subnavs, så kun 1 er åben ad gangen
+      element.classList.add("hidden");
+    });
+    allDrpIcons.forEach((element) => { //Drejer alle drop down ikonerne, så kun 1 er vender opad ad gangen
+      element.style.transform = "rotate(0deg)";
+    });
+    subnavClass.remove("hidden"); //Viser den valgte subnav
+    this.thisBtn.style.transform = "rotate(180deg)"; //Drejer knappen der blev trykket på
+  } else {
+    subnavClass.add("hidden"); //Skjuler den valgte subnav
+    this.thisBtn.style.transform = "rotate(0deg)"; //Drejer knappen der blev trykket på tilbage til normal
+  }
+}
+
 //Vis eller skjul søgefelt
 const searchBar = document.getElementById("searchBar");
 
